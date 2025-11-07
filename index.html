@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TKJ Learning Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-network-wired"></i>
+                <span>TKJ Learning</span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="dashboard">Dashboard</a></li>
+                    <li><a href="#" class="nav-link" data-page="belajar">Belajar</a></li>
+                    <li><a href="#" class="nav-link" data-page="simulasi">Simulasi</a></li>
+                    <li><a href="#" class="nav-link" data-page="leaderboard">Leaderboard</a></li>
+                    <li><a href="#" class="nav-link" data-page="profil">Profil</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-info">
+                    <span class="username">Siswa TKJ</span>
+                    <div class="xp-badge">XP: 1250</div>
+                </div>
+                <button class="logout-btn"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="container">
+                    <h1>Platform Pembelajaran TKJ Interaktif</h1>
+                    <p>Tingkatkan keterampilan jaringan komputer Anda dengan pengalaman belajar yang gamified dan menyenangkan</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary">Mulai Belajar</button>
+                        <button class="btn-secondary">Lihat Simulasi</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <div class="container">
+                    <h2>Fitur Utama</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-book"></i>
+                            <h3>Techbook AI</h3>
+                            <p>Materi pembelajaran interaktif dengan bantuan AI</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-terminal"></i>
+                            <h3>Simulasi CLI</h3>
+                            <p>Latihan perintah jaringan dalam terminal virtual</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>Simulasi Jaringan</h3>
+                            <p>Praktik konfigurasi jaringan dengan visualisasi</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Simulasi Keamanan</h3>
+                            <p>Belajar serangan dan pertahanan jaringan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Page -->
+        <section id="dashboard" class="page">
+            <div class="container">
+                <h2>Dashboard Siswa</h2>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3>Absensi Hari Ini</h3>
+                        <div class="attendance-status">
+                            <span class="status-badge present">Hadir</span>
+                            <p>Anda telah absen hari ini</p>
+                            <button class="btn-small" id="btn-absensi">Absen Sekarang</button>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Progress Pembelajaran</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <span>65% Selesai</span>
+                        </div>
+                        <p>Materi: Konfigurasi Router</p>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>XP Terkini</h3>
+                        <div class="xp-display">
+                            <span class="xp-value">1250</span>
+                            <p>Total XP Anda</p>
+                        </div>
+                        <div class="xp-breakdown">
+                            <div>Quiz: 400 XP</div>
+                            <div>Simulasi: 600 XP</div>
+                            <div>Essay: 250 XP</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h3>Aktivitas Terbaru</h3>
+                        <ul class="activity-list">
+                            <li>Menyelesaikan Quiz Jaringan Dasar</li>
+                            <li>Mengumpulkan Essay Keamanan Jaringan</li>
+                            <li>Menyelesaikan Simulasi CLI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Belajar Page -->
+        <section id="belajar" class="page">
+            <div class="container">
+                <h2>Techbook AI</h2>
+                <div class="learning-container">
+                    <div class="materials-sidebar">
+                        <h3>Materi Pembelajaran</h3>
+                        <ul class="materials-list">
+                            <li class="material-item active">Jaringan Dasar</li>
+                            <li class="material-item">Konfigurasi Router</li>
+                            <li class="material-item">Keamanan Jaringan</li>
+                            <li class="material-item">Troubleshooting</li>
+                            <li class="material-item">Protokol Jaringan</li>
+                        </ul>
+                    </div>
+                    <div class="material-content">
+                        <div class="material-header">
+                            <h3>Jaringan Dasar</h3>
+                            <div class="material-meta">
+                                <span>Level: Pemula</span>
+                                <span>XP: 100</span>
+                            </div>
+                        </div>
+                        <div class="material-body">
+                            <p>Jaringan komputer adalah dua atau lebih perangkat komputer yang saling terhubung untuk berbagi sumber daya dan berkomunikasi.</p>
+                            <h4>Topologi Jaringan</h4>
+                            <p>Topologi jaringan adalah cara perangkat diatur dan terhubung dalam jaringan. Beberapa jenis topologi:</p>
+                            <ul>
+                                <li>Topologi Bus</li>
+                                <li>Topologi Star</li>
+                                <li>Topologi Ring</li>
+                                <li>Topologi Mesh</li>
+                            </ul>
+                            <div class="quiz-section">
+                                <h4>Quiz Singkat</h4>
+                                <div class="quiz-question">
+                                    <p>Apa fungsi utama dari switch dalam jaringan?</p>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="quiz1" value="a"> Menghubungkan jaringan yang berbeda</label>
+                                        <label><input type="radio" name="quiz1" value="b"> Menghubungkan perangkat dalam LAN</label>
+                                        <label><input type="radio" name="quiz1" value="c"> Mengatur lalu lintas internet</label>
+                                    </div>
+                                    <button class="btn-small" id="submit-quiz">Submit Jawaban</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulasi Page -->
+        <section id="simulasi" class="page">
+            <div class="container">
+                <h2>Simulasi Jaringan</h2>
+                <div class="simulation-tabs">
+                    <button class="tab-btn active" data-tab="cli">CLI Trainer</button>
+                    <button class="tab-btn" data-tab="network">Simulasi Jaringan</button>
+                    <button class="tab-btn" data-tab="security">Simulasi Keamanan</button>
+                </div>
+                
+                <!-- CLI Trainer -->
+                <div id="cli-tab" class="tab-content active">
+                    <div class="cli-container">
+                        <div class="cli-header">
+                            <h3>Terminal Simulator</h3>
+                            <div class="cli-info">
+                                <span>Perintah yang didukung: ping, ipconfig, traceroute, config</span>
+                            </div>
+                        </div>
+                        <div class="cli-output" id="cli-output">
+                            <div class="cli-line">TKJ Terminal Simulator v1.0</div>
+                            <div class="cli-line">Ketik 'help' untuk melihat daftar perintah</div>
+                        </div>
+                        <div class="cli-input-container">
+                            <span class="cli-prompt">user@tkj:~$</span>
+                            <input type="text" class="cli-input" id="cli-input" placeholder="Ketik perintah di sini...">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Network Simulation -->
+                <div id="network-tab" class="tab-content">
+                    <div class="network-simulation">
+                        <div class="network-controls">
+                            <h3>Simulasi Koneksi Jaringan</h3>
+                            <div class="cable-selection">
+                                <label>Pilih Jenis Kabel:</label>
+                                <select id="cable-type">
+                                    <option value="straight">Straight</option>
+                                    <option value="cross">Cross</option>
+                                </select>
+                            </div>
+                            <button class="btn-primary" id="test-connection">Test Koneksi</button>
+                        </div>
+                        <div class="network-visualization">
+                            <div class="device" id="pc1">PC 1</div>
+                            <div class="cable" id="cable"></div>
+                            <div class="device" id="pc2">PC 2</div>
+                        </div>
+                        <div class="connection-result" id="connection-result">
+                            <p>Status koneksi akan muncul di sini setelah testing</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Security Simulation -->
+                <div id="security-tab" class="tab-content">
+                    <div class="security-simulation">
+                        <h3>Simulasi Serangan DDoS</h3>
+                        <p>Simulasi ini menunjukkan bagaimana serangan DDoS dapat mempengaruhi server</p>
+                        <div class="simulation-controls">
+                            <button class="btn-primary" id="start-attack">Mulai Serangan</button>
+                            <button class="btn-secondary" id="stop-attack">Hentikan Serangan</button>
+                        </div>
+                        <div class="server-status">
+                            <div class="server" id="server">
+                                <i class="fas fa-server"></i>
+                                <span>Server</span>
+                            </div>
+                            <div class="traffic-indicator" id="traffic-indicator">
+                                <div class="traffic-bar"></div>
+                                <span>Lalu Lintas Normal</span>
+                            </div>
+                        </div>
+                        <div class="attack-info">
+                            <h4>Informasi Serangan DDoS</h4>
+                            <p>Serangan DDoS (Distributed Denial of Service) adalah upaya untuk membuat sumber daya jaringan tidak tersedia bagi pengguna yang dituju.</p>
+                            <p>Serangan ini dilakukan dengan membanjiri server dengan permintaan dari banyak sumber secara bersamaan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Page -->
+        <section id="leaderboard" class="page">
+            <div class="container">
+                <h2>Leaderboard</h2>
+                <div class="leaderboard-tabs">
+                    <button class="tab-btn active" data-board="global">Global</button>
+                    <button class="tab-btn" data-board="class">Kelas</button>
+                </div>
+                
+                <div class="leaderboard-container">
+                    <div class="leaderboard-header">
+                        <div class="rank-header">Rank</div>
+                        <div class="name-header">Nama</div>
+                        <div class="xp-header">XP</div>
+                        <div class="level-header">Level</div>
+                    </div>
+                    <div class="leaderboard-list" id="leaderboard-list">
+                        <!-- Leaderboard items will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="user-position">
+                    <h3>Posisi Anda</h3>
+                    <div class="user-rank">
+                        <span class="rank">15</span>
+                        <span class="name">Anda</span>
+                        <span class="xp">1250 XP</span>
+                        <span class="level">Level 5</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profil Page -->
+        <section id="profil" class="page">
+            <div class="container">
+                <h2>Profil Pengguna</h2>
+                <div class="profile-container">
+                    <div class="profile-sidebar">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Siswa TKJ</h3>
+                        <p>siswa@tkj.sch.id</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-value">1250</span>
+                                <span class="stat-label">Total XP</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">15</span>
+                                <span class="stat-label">Rank</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">5</span>
+                                <span class="stat-label">Level</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-section">
+                            <h3>Informasi Pribadi</h3>
+                            <form class="profile-form">
+                                <div class="form-group">
+                                    <label for="fullname">Nama Lengkap</label>
+                                    <input type="text" id="fullname" value="Siswa TKJ">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" value="siswa@tkj.sch.id">
+                                </div>
+                                <div class="form-group">
+                                    <label for="kelas">Kelas</label>
+                                    <input type="text" id="kelas" value="XII TKJ 2">
+                                </div>
+                                <button type="submit" class="btn-primary">Simpan Perubahan</button>
+                            </form>
+                        </div>
+                        
+                        <div class="profile-section">
+                            <h3>Riwayat Aktivitas</h3>
+                            <div class="activity-timeline">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <h4>Menyelesaikan Quiz Jaringan Dasar</h4>
+                                        <p>Anda mendapatkan 100 XP</p>
+                                        <span class="activity-time">2 jam yang lalu</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <h4>Mempelajari Konfigurasi Router</h4>
+                                        <p>Progress: 75%</p>
+                                        <span class="activity-time">1 hari yang lalu</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-terminal"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <h4>Menyelesaikan Simulasi CLI</h4>
+                                        <p>Anda mendapatkan 150 XP</p>
+                                        <span class="activity-time">2 hari yang lalu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 TKJ Learning Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                                                    </html>
